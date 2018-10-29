@@ -15,7 +15,22 @@ body {
 }
 
 .container__video {
+
     width: 100vw;
     height: auto;
 }
 
+.video__tittle {
+
+    margin: auto;
+    text-align: center;
+}
+
+
+.video__text {
+    font-size: 10rem;
+    text-align: center;
+    margin: auto;
+    line-height: 50rem;
+
+}
