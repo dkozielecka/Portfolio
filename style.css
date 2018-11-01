@@ -196,8 +196,8 @@ h1 {
     color: #DD7F7C;
 }
 
-.separator {
-    
+span.separator {
+
     display: block;
     background-color: #6C8286;
     height: 0.2rem;
@@ -205,15 +205,27 @@ h1 {
     margin: 1rem auto;
 }
 
-.about__me, .about__me>img, .about__me>p {
-    
+div.separator__container {
+
+    display: block;
+    width: 100vw;
+    height: auto;
+}
+
+.about__me,
+.about__me > img,
+.about__me > p {
+
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
 }
 
-.about__me--section>h2 {
-    
+.about__me--section > h2 {
+
     font-size: 4rem;
     letter-spacing: 1rem;
     text-align: center;
@@ -221,8 +233,8 @@ h1 {
     color: #DD7F7C;
 }
 
-.about__me>p {
-    
+.about__me > p {
+
     color: #6C8286;
     font-size: 2rem;
     letter-spacing: 0.5rem;
@@ -231,11 +243,93 @@ h1 {
     text-align: justify;
 }
 
-.about__me>img {
-    
-    width: 35vw;
+.about__me > img {
+
+    width: 30vw;
     height: auto;
     box-shadow: 1px 1px 12px #000;
+    transform: rotate(-5deg);
+    margin-bottom: 4rem;
 }
 
+.my__skills--section > h2 {
 
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    color: #DD7F7C;
+}
+
+.future__skills--section > h2 {
+
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    color: #DD7F7C;
+}
+
+.portfolio__section > h2 {
+
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    color: #DD7F7C;
+}
+
+.contact__section > h2 {
+
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    text-align: center;
+    margin: 2rem auto;
+    color: #DD7F7C;
+}
+
+.my__skills--section {
+
+    width: 100vw;
+    height: auto;
+}
+
+.my__skills {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+}
+
+.future__skills {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+
+}
+
+div.my__skills > span {
+
+    width: 33vw;
+    height: auto;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    color: #6C8286;
+}
+
+div.my__skills > .fab {
+
+    width: 33vw;
+    height: auto;
+    text-align: center;
+    font-size: 6rem;
+}
