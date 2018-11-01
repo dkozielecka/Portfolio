@@ -259,6 +259,7 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
+    width: 100vw;
 }
 
 .future__skills--section > h2 {
@@ -268,6 +269,7 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
+    width: 100vw;
 }
 
 .portfolio__section > h2 {
@@ -277,6 +279,8 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
+    width: 100vw;
+    
 }
 
 .contact__section > h2 {
@@ -286,21 +290,26 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
+    width: 100vw;
 }
 
 .my__skills--section {
 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     width: 100vw;
     height: auto;
+
 }
 
 .my__skills {
 
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 50vw;
     height: auto;
 }
 
@@ -310,14 +319,14 @@ div.separator__container {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
+    width: 50vw;
     height: auto;
 
 }
 
 div.my__skills > span {
 
-    width: 33vw;
+    width: 30%;
     height: auto;
     text-align: center;
     font-size: 2rem;
@@ -328,7 +337,38 @@ div.my__skills > span {
 
 div.my__skills > .fab {
 
-    width: 33vw;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    font-size: 6rem;
+}
+
+
+.future__skills--section {
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: auto;
+
+}
+
+
+div.future__skills > span {
+
+    width: 30%;
+    height: auto;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    color: #6C8286;
+}
+
+div.future__skills > .fab {
+
+    width: 30%;
     height: auto;
     text-align: center;
     font-size: 6rem;
