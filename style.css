@@ -280,7 +280,7 @@ div.separator__container {
     margin: 2rem auto;
     color: #DD7F7C;
     width: 100vw;
-    
+
 }
 
 .contact__section > h2 {
@@ -289,8 +289,10 @@ div.separator__container {
     letter-spacing: 1rem;
     text-align: center;
     margin: 2rem auto;
-    color: #DD7F7C;
+    padding: 1rem;
+    color: #FFDFD0;
     width: 100vw;
+
 }
 
 .my__skills--section {
@@ -372,4 +374,102 @@ div.future__skills > .fab {
     height: auto;
     text-align: center;
     font-size: 6rem;
+}
+
+.parallax {
+
+    background-image: url("img/footer.jpg");
+    height: 30vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: -2.2rem;
+}
+
+div.contact > .fas {
+
+    width: 30%;
+    height: auto;
+    text-align: center;
+    font-size: 6rem;
+    color: #FFDFD0;
+}
+
+div.contact > .far {
+
+    width: 30%;
+    height: auto;
+    text-align: center;
+    font-size: 6rem;
+    color: #FFDFD0;
+}
+
+.contact__section {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100vw;
+    box-shadow:  2px 2px 12px #000;
+}
+
+.contact {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70vw;
+    
+}
+
+.contact>i {
+    
+    width: 30%;
+    height: auto;
+}
+
+.copyright {
+    
+    display: flex;
+    width: 100vw;
+    height: auto;
+}
+
+.copyright>span {
+    
+    color: #FFDFD0;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin: 0 auto 0 1rem;
+   
+}
+
+.contact>span {
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 30%;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    color: #FFDFD0;
+    
+}
+
+.contact>span>a {
+    
+    color: #FFDFD0;
+    text-decoration: none;
+}
+
+.contact>span>a:hover {
+    
+    color: #DD7F7C;
+}
+
+.contact+.separator__container>.separator {
+    
+    background-color: #DD7F7C;
 }
