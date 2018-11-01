@@ -9,7 +9,7 @@ html {
 
     font-size: 10px;
     font-family: 'Oswald', sans-serif;
-
+    scroll-behavior: smooth;
 }
 
 body {
@@ -41,7 +41,6 @@ h1 {
     font-size: 10rem;
     text-align: center;
     color: #855B70;
-    margin: auto;
     line-height: 50rem;
 
 }
@@ -379,7 +378,7 @@ div.future__skills > .fab {
 .parallax {
 
     background-image: url("img/footer.jpg");
-    height: 30vh;
+    height: 50vh;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -406,48 +405,50 @@ div.contact > .far {
 }
 
 .contact__section {
-    
+
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     flex-wrap: wrap;
     width: 100vw;
-    box-shadow:  2px 2px 12px #000;
+    box-shadow: 2px 2px 20px #000;
 }
 
 .contact {
-    
+
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     flex-wrap: wrap;
     width: 70vw;
-    
+
 }
 
-.contact>i {
-    
+.contact > i {
+
     width: 30%;
     height: auto;
 }
 
 .copyright {
-    
+
     display: flex;
     width: 100vw;
     height: auto;
+    margin-bottom: -4rem;
 }
 
-.copyright>span {
-    
+.copyright > span {
+
     color: #FFDFD0;
     font-size: 1rem;
     letter-spacing: 0.1rem;
-    margin: 0 auto 0 1rem;
-   
+    margin: 0 auto -4rem 1rem;
+
 }
 
-.contact>span {
-    
+.contact > span {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -455,21 +456,44 @@ div.contact > .far {
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
     color: #FFDFD0;
-    
+
 }
 
-.contact>span>a {
-    
+.contact > span > a {
+
     color: #FFDFD0;
     text-decoration: none;
 }
 
-.contact>span>a:hover {
-    
+.contact > span > a:hover {
+
     color: #DD7F7C;
 }
 
-.contact+.separator__container>.separator {
-    
+.contact + .separator__container > .separator {
+
     background-color: #DD7F7C;
+}
+
+
+.back__button {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100vw;
+    margin: 0 5rem 4rem 0;
+
+}
+
+.back__button > a > .fas {
+
+    font-size: 4rem;
+    color: #DD7F7C;
+
+}
+
+.back__button > a > .fas:hover {
+
+    color: #FFDFD0;
 }
