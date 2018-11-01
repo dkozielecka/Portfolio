@@ -6,27 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Daria Kozielecka - portfolio</title>
-    <link rel="stylesheet" href="Portfolio/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container__video">
         <video id="vid" autoplay loop>
-            <source src="https://github.com/dkozielecka/Portfolio/blob/master/video/Pexels%20Videos%203069.mp4" type="video/mp4">
+            <source src="video/Pexels%20Videos%203069.mp4" type="video/mp4">
             Twoja przeglądarka nie obsługuje atrybutu wideo.
         </video>
         <script>
             document.getElementById('vid').play();
 
         </script>
-        
-        <p class="video__tittle">
-            
-            <span class="video__text">Gun to hire me</span>
-        </p>
-        <a href="" class="video__arrow"></a>
+
+        <div class="video__tittle">
+
+            <h1>Gun to hire me</h1>
+
+        </div>
+        <div class="video__arrow">
+
+            <a href="#section1"><i class="fas fa-angle-double-down"></i></a>
+        </div>
     </div>
+
+    <header id="section1">
+
+        <div class="header__photo">
+            <img src="img/header__photo.jpg" alt="my-photo">
+        </div>
+
+        <div class="header__tittle">
+            <h2>Daria Kozielecka</h2>
+            <h3>Tworzę strony internetowe</h3>
+        </div>
+
+        <div class="header__social--media">
+            <span class="header__social--tittle">Znajdź mnie</span>
+            <div class="header__social--icons">
+                <a href="https://github.com/dkozielecka" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/daria-kozielecka-723a7a142/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <span class="separator"></span>
+
+    <section class="about__me--section">
+
+        <h2>O mnie</h2>
+
+        <div class="about__me">
+            <img src="img/about__me.jpg" alt="">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis explicabo, non laboriosam. Non, natus totam nulla temporibus odit vitae ratione cumque eum, perspiciatis laudantium. Perspiciatis nisi delectus voluptas cumque consectetur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae similique dicta laudantium, temporibus, facilis tenetur ea animi suscipit provident ducimus nam, quam nihil. Sapiente provident repellendus, expedita similique recusandae ea.</p>
+
+        </div>
+    </section>
+
 
 </body>
 
