@@ -17,6 +17,7 @@ body {
 
     width: 100vw;
     background-color: #ffffff;
+    margin: 0 auto;
 
 }
 
@@ -26,6 +27,7 @@ body {
     height: auto;
     position: relative;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
 
 }
 
@@ -82,6 +84,7 @@ h1 {
 
     font-size: 7rem;
     color: #855B70;
+    transition: 0.5s all;
 }
 
 .fas:hover,
@@ -98,6 +101,7 @@ h1 {
     background-color: #fff;
     justify-content: space-around;
     flex-direction: row;
+    margin: 0 auto;
 }
 
 .header__photo {
@@ -172,6 +176,7 @@ h1 {
     font-size: 3rem;
     color: #855B70;
     padding: 1rem;
+    transition: 0.5s all;
 }
 
 .fab:hover,
@@ -186,6 +191,7 @@ h1 {
 
     font-size: 3rem;
     color: #855B70;
+    transition: 0.5s all;
 }
 
 .fab:hover,
@@ -301,6 +307,7 @@ div.separator__container {
     flex-wrap: wrap;
     width: 100vw;
     height: auto;
+    margin: 0 auto;
 
 }
 
@@ -342,6 +349,7 @@ div.my__skills > .fab {
     height: auto;
     text-align: center;
     font-size: 6rem;
+    transition: 0.5s all;
 }
 
 
@@ -352,6 +360,7 @@ div.my__skills > .fab {
     flex-wrap: wrap;
     width: 100vw;
     height: auto;
+    margin: 0 auto;
 
 }
 
@@ -373,6 +382,7 @@ div.future__skills > .fab {
     height: auto;
     text-align: center;
     font-size: 6rem;
+    transition: 0.5s all;
 }
 
 .parallax {
@@ -393,6 +403,7 @@ div.contact > .fas {
     text-align: center;
     font-size: 6rem;
     color: #FFDFD0;
+    transition: 0.5s all;
 }
 
 div.contact > .far {
@@ -402,6 +413,7 @@ div.contact > .far {
     text-align: center;
     font-size: 6rem;
     color: #FFDFD0;
+    transition: 0.5s all;
 }
 
 .contact__section {
@@ -412,6 +424,7 @@ div.contact > .far {
     flex-wrap: wrap;
     width: 100vw;
     box-shadow: 2px 2px 20px #000;
+    margin: 0 auto;
 }
 
 .contact {
@@ -432,18 +445,18 @@ div.contact > .far {
 
 .copyright {
 
-    display: flex;
+    display: block;
     width: 100vw;
     height: auto;
-    margin-bottom: -4rem;
 }
 
 .copyright > span {
 
+    display: block;
     color: #FFDFD0;
     font-size: 1rem;
     letter-spacing: 0.1rem;
-    margin: 0 auto -4rem 1rem;
+    padding: 1rem 1rem;
 
 }
 
@@ -482,7 +495,7 @@ div.contact > .far {
     justify-content: flex-end;
     align-items: flex-end;
     width: 100vw;
-    margin: 0 5rem 4rem 0;
+    margin: 0 5rem -3rem 0;
 
 }
 
@@ -490,6 +503,7 @@ div.contact > .far {
 
     font-size: 4rem;
     color: #DD7F7C;
+    transition: 0.5s all;
 
 }
 
@@ -497,3 +511,102 @@ div.contact > .far {
 
     color: #FFDFD0;
 }
+
+.my__portfolio {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100vw;
+    height: auto;
+    margin: 0 auto 2rem;
+}
+
+
+.project__card {
+
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    width: 40vw;
+    height: auto;
+    margin: 2rem auto;
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 10px #000;
+    transition: 0.1s;
+}
+
+.project__card:hover {
+
+    box-shadow: 1px 1px 20px #000;
+}
+
+
+.project__card--text > h3 {
+
+    display: flex;
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    font-weight: bold;
+    color: #6C8286;
+    padding: 1rem 0;
+
+}
+
+
+.project__card--text > span {
+
+    display: flex;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    color: #855B70;
+    text-align: justify;
+    padding: 0 2rem;
+}
+
+.project__card--text > a {
+
+    display: flex;
+    text-decoration: none;
+    width: 10rem;
+    height: auto;
+    margin: 2rem auto 1rem;
+    padding: 1rem 1rem;
+    background-color: #855B70;
+    border-radius: 0.3rem;
+    border: 2px solid #DD7F7C;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: #FFDFD0;
+    transition: 0.3s;
+}
+
+.project__card--text > a:hover {
+    
+   background-color: #DD7F7C; 
+}
+
+.project__card--img {
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10rem;
+    width: auto;
+}
+
+.project__card--img>img {
+    
+    height: 10rem;
+    width: auto;
+}
+
