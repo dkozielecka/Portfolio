@@ -528,7 +528,8 @@ div.contact > .far {
 .project__card {
 
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    flex-direction: row;
     background-color: #fff;
     width: 40vw;
     height: auto;
@@ -544,6 +545,11 @@ div.contact > .far {
     box-shadow: 1px 1px 20px #000;
 }
 
+.project__card--text {
+
+    width: 70%;
+    height: auto;
+}
 
 .project__card--text > h3 {
 
@@ -566,7 +572,7 @@ div.contact > .far {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
     color: #855B70;
-    text-align: justify;
+    text-align: center;
     padding: 0 2rem;
 }
 
@@ -591,22 +597,79 @@ div.contact > .far {
 }
 
 .project__card--text > a:hover {
-    
-   background-color: #DD7F7C; 
+
+    background-color: #DD7F7C;
 }
 
 .project__card--img {
-    
+
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: 25%;
+}
+
+.project__card--img > img {
+
+    height: auto;
+    width: 100%;
+}
+
+.menu__nav {
+
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 10rem;
-    width: auto;
+    flex-direction: row;
+    margin: 1rem auto;
+    width: 100vw;
+    height: auto;
+    box-shadow: 1px 1px 12px #000;
+    background-color: #9A8A91;
 }
 
-.project__card--img>img {
-    
-    height: 10rem;
-    width: auto;
+.nav {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem 3rem 1rem auto;
+    text-align: center;
+
 }
 
+.nav > ul {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem 3rem 1rem auto;
+    text-align: center;
+}
+
+.nav > ul > li {
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row;
+    margin: 1rem 3rem 1rem auto;
+    text-align: center;
+}
+
+.nav > ul > li > a {
+
+    text-decoration: none;
+    font-size: 2rem;
+    letter-spacing: 0.5rem;
+    font-weight: bold;
+    color: #DD7F7C;
+}
+
+.nav > ul > li:hover > a:hover {
+
+    background-color: #FFDFD0;
+    color: #9A8A91;
+}
