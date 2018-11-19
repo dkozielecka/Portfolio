@@ -15,83 +15,17 @@ html {
 body {
 
 
-    width: 100vw;
     background-color: #ffffff;
-    margin: 0 auto;
     font-family: 'Oswald', sans-serif;
 
 }
 
-.container__video {
-
+container__background {
+    
     width: 100vw;
-    height: auto;
-    position: relative;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.5);
-    margin: 0 auto;
-
-}
-
-.video__tittle {
-
-    margin: auto;
-    text-align: center;
-
-}
-
-h1 {
-
-    font-size: 10rem;
-    text-align: center;
-    color: #855B70;
-    line-height: 50rem;
-
-}
-
-.video__tittle {
-
-    background: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.video__arrow {
-
-    background: rgba(0, 0, 0, 0);
-    position: absolute;
-    top: 60rem;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.video_arrow > a {
-
-    text-decoration: none;
-
-}
-
-.fas,
-.fa-angle-double-down {
-
-    font-size: 7rem;
-    color: #855B70;
-    transition: 0.5s all;
-}
-
-.fas:hover,
-.fa-angle-double-down:hover {
-
-    color: #9A8A91;
+    height: 100vh;
+    background-image: url(img/background.jpg);
+    background-size: cover;
 }
 
 #section1 {
