@@ -15,25 +15,25 @@ html {
 body {
 
 
-    background-color: #ffffff;
+    background-color: #171B27;
     font-family: 'Oswald', sans-serif;
 
 }
 
-container__background {
+.hero {
     
-    width: 100vw;
-    height: 100vh;
     background-image: url(img/background.jpg);
     background-size: cover;
+    max-width: 100%;
+    height: 100vh;
 }
 
 #section1 {
 
-    width: 100vw;
+    max-width: 100vw;
     height: 70vh;
     display: flex;
-    background-color: #fff;
+    background-color: #171B27;
     justify-content: space-around;
     flex-direction: row;
     margin: 0 auto;
@@ -148,7 +148,7 @@ span.separator {
 div.separator__container {
 
     display: block;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
 }
 
@@ -160,7 +160,7 @@ div.separator__container {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
 }
 
@@ -199,7 +199,7 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
-    width: 100vw;
+    width: 100%;
 }
 
 .future__skills--section > h2 {
@@ -209,7 +209,7 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
-    width: 100vw;
+    width: 100%;
 }
 
 .portfolio__section > h2 {
@@ -219,7 +219,7 @@ div.separator__container {
     text-align: center;
     margin: 2rem auto;
     color: #DD7F7C;
-    width: 100vw;
+    width: 100%;
 
 }
 
@@ -231,7 +231,7 @@ div.separator__container {
     margin: 2rem auto;
     padding: 1rem;
     color: #FFDFD0;
-    width: 100vw;
+    width: 100%;
 
 }
 
@@ -240,7 +240,7 @@ div.separator__container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
     margin: 0 auto;
 
@@ -293,7 +293,7 @@ div.my__skills > .fab {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
     margin: 0 auto;
 
@@ -357,7 +357,7 @@ div.contact > .far {
     justify-content: center;
     align-items: flex-end;
     flex-wrap: wrap;
-    width: 100vw;
+    max-width: 100vw;
     box-shadow: 2px 2px 20px #000;
     margin: 0 auto;
 }
@@ -381,7 +381,7 @@ div.contact > .far {
 .copyright {
 
     display: block;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
 }
 
@@ -429,7 +429,7 @@ div.contact > .far {
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
-    width: 100vw;
+    width: 100%;
     margin: 0 5rem -3rem 0;
 
 }
@@ -454,7 +454,7 @@ div.contact > .far {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    width: 100vw;
+    max-width: 100vw;
     height: auto;
     margin: 0 auto 2rem;
 }
@@ -465,7 +465,7 @@ div.contact > .far {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    background-color: #fff;
+    background-color: #11141c;
     width: 40vw;
     height: auto;
     margin: 2rem auto;
@@ -547,64 +547,6 @@ div.contact > .far {
 .project__card--img > img {
 
     height: auto;
-    width: 100%;
+    max-width: 100%;
 }
 
-.menu__nav {
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin: 1rem auto;
-    width: 100vw;
-    height: auto;
-    box-shadow: 1px 1px 12px #000;
-    background-color: #9A8A91;
-}
-
-.nav {
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin: 1rem 3rem 1rem auto;
-    text-align: center;
-
-}
-
-.nav > ul {
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin: 1rem 3rem 1rem auto;
-    text-align: center;
-}
-
-.nav > ul > li {
-
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    margin: 1rem 3rem 1rem auto;
-    text-align: center;
-}
-
-.nav > ul > li > a {
-
-    text-decoration: none;
-    font-size: 2rem;
-    letter-spacing: 0.5rem;
-    font-weight: bold;
-    color: #DD7F7C;
-}
-
-.nav > ul > li:hover > a:hover {
-
-    background-color: #FFDFD0;
-    color: #9A8A91;
-}
