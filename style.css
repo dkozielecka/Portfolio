@@ -528,6 +528,11 @@ div.contact > .far {
 
         padding: 1rem 0;
     }
+
+    .back__button {
+
+        display: none;
+    }
 }
 
 .contact > i {
