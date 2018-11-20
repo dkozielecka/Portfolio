@@ -41,8 +41,14 @@ body {
     width: 100%;
     height: auto;
     justify-content: flex-end;
-    position: sticky;
+    position: fixed;
     top: 0;
+}
+
+
+.black {
+    
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 .nav__list {
@@ -249,7 +255,7 @@ body {
 span.separator {
 
     display: block;
-    background-color: #6C8286;
+    background-color: #11141c;
     height: 0.2rem;
     width: 80vw;
     margin: 1rem auto;
@@ -260,6 +266,12 @@ div.separator__container {
     display: block;
     max-width: 100vw;
     height: auto;
+}
+
+
+.about__me--section {
+    
+    background-image: linear-gradient(135deg, #171B27 52%, #11141c 48%);
 }
 
 .about__me,
@@ -320,6 +332,12 @@ div.separator__container {
     margin: 2rem auto;
     color: #DD7F7C;
     width: 100%;
+}
+
+
+.portfolio__section {
+    
+    background-image: linear-gradient(135deg, #171B27 52%, #11141c 48%);
 }
 
 .portfolio__section > h2 {
