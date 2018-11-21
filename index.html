@@ -20,8 +20,8 @@
             }
         })
         $(document).ready(function() {
-            $(".menu .menu__tittle").click(function() {
-                $(".nav__list").toggleClass(".active")
+            $("menu menu__tittle").click(function() {
+                $("nav__list").toggleClass("active")
             })
         })
 
@@ -32,15 +32,17 @@
 
 <body>
 
-    <div class="nav__mobile">
 
-        <div class="menu">
-            <h4 class="menu__tittle">Menu</h4>
-        </div>
-
-    </div>
 
     <nav class="nav">
+
+        <div class="nav__mobile">
+
+            <div class="menu">
+                <h4 class="menu__tittle">Menu</h4>
+            </div>
+
+        </div>
 
         <ul class="nav__list">
 
