@@ -149,7 +149,7 @@ body {
 #section1 {
 
     max-width: 100vw;
-    height: 70vh;
+    height: auto;
     display: flex;
     background-color: #171B27;
     justify-content: space-around;
@@ -159,7 +159,7 @@ body {
 .header__photo {
 
     height: auto;
-    width: 40%;
+    width: 30%;
     display: flex;
     order: 2;
 }
@@ -800,6 +800,11 @@ div.contact > .icon> .far {
         order: 1;
         flex-direction: row;
         width: 80%;
+    }
+    
+    .header__photo >img {
+        
+        height: 70%;
     }
 
     .header__tittle {
