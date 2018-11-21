@@ -153,30 +153,31 @@ body {
     background-color: #171B27;
     justify-content: space-around;
     flex-direction: row;
-    margin: 0 auto;
 }
 
 .header__photo {
 
-    height: 70vh;
-    width: auto;
+    height: auto;
+    width: 40%;
     display: flex;
     order: 2;
 }
 
 .header__photo > img {
 
-    height: 70vh;
-    width: auto;
+    height: auto;
+    width: 100%;
 }
 
 .header__tittle {
 
     display: flex;
+    width: 35%;
     order: 3;
     flex-wrap: wrap;
-    width: 35vw;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .header__tittle > h2 {
@@ -184,7 +185,6 @@ body {
     font-size: 4rem;
     letter-spacing: 1rem;
     color: #DD7F7C;
-    margin-bottom: -23rem;
 }
 
 .header__tittle > h3 {
@@ -192,7 +192,6 @@ body {
     font-size: 2rem;
     letter-spacing: 0.5rem;
     color: #855B70;
-    margin-bottom: 18rem;
 }
 
 
@@ -200,9 +199,11 @@ body {
 
     display: flex;
     order: 1;
-    width: 23vh;
-    align-items: flex-end;
+    width: 23%;
+    align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
 .header__social--tittle {
@@ -211,15 +212,11 @@ body {
     letter-spacing: 0.5rem;
     font-weight: bold;
     color: #DD7F7C;
-    margin-left: 6rem;
-    margin-bottom: -24rem;
 }
 
 .header__social--icons {
 
     display: flex;
-    margin-left: 8rem;
-    margin-bottom: 12rem;
 }
 
 .fab,
@@ -386,18 +383,6 @@ div.separator__container {
 
 }
 
-@media (max-width: 768px) {
-
-    .my__skills,
-    .future__skills,
-    .project_card {
-
-        flex-direction: column;
-        align-items: center;
-
-    }
-
-}
 
 .future__skills {
 
@@ -410,10 +395,8 @@ div.separator__container {
 }
 
 
-div.my__skills > span {
+div.my__skills > .icon > span {
 
-    width: 30%;
-    height: auto;
     text-align: center;
     font-size: 2rem;
     letter-spacing: 0.3rem;
@@ -421,10 +404,8 @@ div.my__skills > span {
     color: #6C8286;
 }
 
-div.my__skills > .fab {
+div.my__skills > .icon > .fab {
 
-    width: 30%;
-    height: auto;
     text-align: center;
     font-size: 6rem;
     transition: 0.5s all;
@@ -443,10 +424,8 @@ div.my__skills > .fab {
 }
 
 
-div.future__skills > span {
+div.future__skills > .icon > span {
 
-    width: 30%;
-    height: auto;
     text-align: center;
     font-size: 2rem;
     letter-spacing: 0.3rem;
@@ -454,13 +433,20 @@ div.future__skills > span {
     color: #6C8286;
 }
 
-div.future__skills > .fab {
+div.future__skills > .icon > .fab {
 
-    width: 30%;
-    height: auto;
     text-align: center;
     font-size: 6rem;
     transition: 0.5s all;
+}
+
+.icon {
+
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .parallax {
@@ -515,25 +501,6 @@ div.contact > .far {
 
 }
 
-@media (max-width: 768px) {
-
-    .contact {
-
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .fas,
-    .far {
-
-        padding: 1rem 0;
-    }
-
-    .back__button {
-
-        display: none;
-    }
-}
 
 .contact > i {
 
@@ -731,7 +698,6 @@ div.contact > .far {
         right: 0;
         padding: 0.5rem 2rem;
         z-index: 1;
-
     }
 
 
@@ -763,7 +729,7 @@ div.contact > .far {
         display: none;
     }
 
-    .nav__list {
+    .active {
 
         display: block;
     }
@@ -787,6 +753,63 @@ div.contact > .far {
         width: 100%;
         text-align: center;
         line-height: 3rem;
+    }
+
+    .my__skills,
+    .future__skills,
+    .project_card {
+
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .contact {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fas,
+    .far {
+
+        padding: 1rem 0;
+    }
+
+    .back__button {
+
+        display: none;
+    }
+
+    .about__me {
+
+        flex-direction: column;
+    }
+
+    #section1 {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__photo {
+
+        order: 1;
+        flex-direction: row;
+    }
+
+    .header__tittle {
+
+        order: 2;
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+
+    .header__social--media {
+
+        order: 3;
+        flex-direction: row;
+        padding: 11rem 0 5rem;
     }
 
 }
