@@ -770,6 +770,7 @@ div.contact > .icon> .far {
 
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .fas,
@@ -857,6 +858,17 @@ div.contact > .icon> .far {
     .about__me > p {
 
         width: 90%;
+    }
+    
+    .contact>.icon {
+        
+        width: 100%;
+        padding: 1rem 0;
+    }
+    
+    .parallax {
+        
+        height: 70vh;
     }
 
 }
