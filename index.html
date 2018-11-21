@@ -20,8 +20,8 @@
             }
         })
         $(document).ready(function() {
-            $("menu menu__tittle").click(function() {
-                $("nav__list").toggleClass("active")
+            $('.menu__tittle').click(function() {
+                $('.nav__list').toggleClass('.active')
             })
         })
 
@@ -239,12 +239,24 @@
         <h2>Kontakt</h2>
 
         <div class="contact">
-            <i class="fas fa-at"></i>
-            <i class="fas fa-phone"></i>
-            <i class="far fa-copyright"></i>
-            <span>daria.kozielecka@gmail.com</span>
-            <span>534-276-631</span>
-            <span>Zdjęcia: <a href="https://www.maciejkolek.com/">https://www.maciejkolek.com/</a></span>
+
+
+            <div class="icon">
+                <i class="fas fa-at"></i>
+                <span>daria.kozielecka@gmail.com</span>
+            </div>
+
+            <div class="icon">
+                <i class="fas fa-phone"></i>
+                <span>534-276-631</span>
+            </div>
+
+            <div class="icon">
+                <i class="far fa-copyright"></i>
+                <span>Zdjęcia: <a href="https://www.maciejkolek.com/">https://www.maciejkolek.com/</a></span>
+            </div>
+
+
         </div>
 
         <div class="separator__container">

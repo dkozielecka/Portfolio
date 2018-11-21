@@ -125,6 +125,7 @@ body {
     letter-spacing: 1rem;
     color: #DD7F7C;
     padding: 0rem 0rem 5rem 0rem;
+    text-align: center;
 }
 
 .cta__link {
@@ -460,7 +461,7 @@ div.future__skills > .icon > .fab {
     margin-top: -2.2rem;
 }
 
-div.contact > .fas {
+div.contact > .icon> .fas {
 
     width: 30%;
     height: auto;
@@ -470,7 +471,7 @@ div.contact > .fas {
     transition: 0.5s all;
 }
 
-div.contact > .far {
+div.contact > .icon> .far {
 
     width: 30%;
     height: auto;
@@ -525,7 +526,7 @@ div.contact > .far {
 
 }
 
-.contact > span {
+.contact > .icon > span {
 
     display: flex;
     flex-wrap: wrap;
@@ -537,13 +538,13 @@ div.contact > .far {
 
 }
 
-.contact > span > a {
+.contact >.icon > span > a {
 
     color: #FFDFD0;
     text-decoration: none;
 }
 
-.contact > span > a:hover {
+.contact > .icon >span > a:hover {
 
     color: #DD7F7C;
 }
@@ -791,26 +792,29 @@ div.contact > .far {
 
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     .header__photo {
 
         order: 1;
         flex-direction: row;
+        width: 80%;
     }
 
     .header__tittle {
 
         order: 2;
         flex-direction: row;
-        padding: 1rem 0;
+        width: 80%;
     }
 
     .header__social--media {
 
         order: 3;
         flex-direction: row;
-        padding: 11rem 0 5rem;
+        width: 80%;
+        justify-content: center;
     }
 
     .project__card {
@@ -833,6 +837,11 @@ div.contact > .far {
     .project__card--img {
 
         width: 80%;
+    }
+    
+    .project__card--img>img {
+        
+        margin: 0 auto;
     }
 
     .about__me > img {
