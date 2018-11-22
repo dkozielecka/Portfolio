@@ -137,6 +137,7 @@ body {
     border: 2px solid #9A8A91;
     padding: 0.5rem 3rem;
     transition: .3s;
+    text-decoration: none;
 }
 
 .cta__link:hover {
@@ -443,7 +444,7 @@ div.future__skills > .icon > .fab {
 
 .icon {
 
-    width: 30%;
+    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -469,6 +470,7 @@ div.contact > .icon > .fas {
     font-size: 6rem;
     color: #FFDFD0;
     transition: 0.5s all;
+    padding: 0 0 2rem 0;
 }
 
 div.contact > .icon > .far {
@@ -479,6 +481,7 @@ div.contact > .icon > .far {
     font-size: 6rem;
     color: #FFDFD0;
     transition: 0.5s all;
+    padding: 0 0 2rem 0;
 }
 
 .contact__section {
@@ -531,7 +534,6 @@ div.contact > .icon > .far {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 30%;
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
     color: #FFDFD0;
@@ -570,6 +572,7 @@ div.contact > .icon > .far {
     font-size: 4rem;
     color: #DD7F7C;
     transition: 0.5s all;
+    padding: 0 0 2rem 0;
 
 }
 
