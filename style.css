@@ -192,7 +192,7 @@ body {
 
     font-size: 2rem;
     letter-spacing: 0.5rem;
-    color: #855B70;
+    color: #c9c9d9;
 }
 
 
@@ -240,7 +240,7 @@ body {
 .fa-linkedin {
 
     font-size: 3rem;
-    color: #855B70;
+    color: #c9c9d9;
     transition: 0.5s all;
 }
 
@@ -297,7 +297,7 @@ body {
 
 .about__me > p {
 
-    color: #6C8286;
+    color: #c9c9d9;
     font-size: 2rem;
     letter-spacing: 0.5rem;
     width: 40vw;
@@ -403,7 +403,7 @@ div.my__skills > .icon > span {
     font-size: 2rem;
     letter-spacing: 0.3rem;
     font-weight: bold;
-    color: #6C8286;
+    color: #c9c9d9;
 }
 
 div.my__skills > .icon > .fab {
@@ -432,7 +432,7 @@ div.future__skills > .icon > span {
     font-size: 2rem;
     letter-spacing: 0.3rem;
     font-weight: bold;
-    color: #6C8286;
+    color: #c9c9d9;
 }
 
 div.future__skills > .icon > .fab {
@@ -629,7 +629,7 @@ div.contact > .icon > .far {
     font-size: 2rem;
     letter-spacing: 0.3rem;
     font-weight: bold;
-    color: #6C8286;
+    color: #c9c9d9;
     padding: 1rem 0;
 
 }
@@ -653,21 +653,22 @@ div.contact > .icon > .far {
     height: auto;
     margin: 2rem auto 1rem;
     padding: 1rem 1rem;
-    background-color: #855B70;
+    background-color: #c9c9d9;
     border-radius: 0.3rem;
-    border: 2px solid #DD7F7C;
+    border: 2px solid #855B70;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    color: #FFDFD0;
+    color: #855B70;
     transition: 0.3s;
 }
 
 .project__card--text > a:hover {
 
-    background-color: #DD7F7C;
+    background-color: #855B70;
+    color: #c9c9d9;
 }
 
 .project__card--img {
