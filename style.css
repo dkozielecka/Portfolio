@@ -702,6 +702,12 @@ div.contact > .icon > .far {
 
 @media (max-width: 768px) {
 
+    html {
+        
+        font-size: 6px;
+        
+    }
+    
     .nav__mobile {
 
         display: block;
