@@ -1,301 +1,299 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Zbiór moich projektów i moja wizytówka.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="Description" content="Zbiór moich projektów i moja wizytówka." />
     <title>Daria Kozielecka - portfolio</title>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:400,600&amp;subset=latin-ext" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+      integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script>
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop()) {
-                $('.nav').addClass('black');
-            } else {
-                $('.nav').removeClass('black');
-            }
-        })
-        $(document).ready(function() {
-            $('.menu__tittle').click(function() {
-                $('.nav__list').toggleClass('active')
-            })
-        })
-
+      $(window).on("scroll", function() {
+        if ($(window).scrollTop()) {
+          $(".nav").addClass("black");
+        } else {
+          $(".nav").removeClass("black");
+        }
+      });
+      $(document).ready(function() {
+        $(".menu__tittle").click(function() {
+          $(".nav__list").toggleClass("active");
+        });
+      });
     </script>
+  </head>
 
-
-</head>
-
-<body>
-
-
-
+  <body>
     <nav class="nav">
-
-        <div class="nav__mobile">
-
-            <div class="menu">
-                <h4 class="menu__tittle">Menu</h4>
-            </div>
-
+      <div class="nav__mobile">
+        <div class="menu">
+          <h4 class="menu__tittle">Menu</h4>
         </div>
+      </div>
 
-        <ul class="nav__list">
-
-            <li class="nav__items">
-                <a href="#header" class="nav__link">Strona główna</a>
-            </li>
-            <li class="nav__items">
-                <a href="#about__me--section" class="nav__link">O mnie</a>
-            </li>
-            <li class="nav__items">
-                <a href="#my__skills--section" class="nav__link">Umiejętności</a>
-            </li>
-            <li class="nav__items">
-                <a href="#future__skills--section" class="nav__link">W trakcie nauki</a>
-            </li>
-            <li class="nav__items">
-                <a href="#portfolio__section" class="nav__link">Portfolio</a>
-            </li>
-            <li class="nav__items--box">
-                <a href="#contact__section" class="nav__link--box">Kontakt</a>
-            </li>
-        </ul>
+      <ul class="nav__list">
+        <li class="nav__items">
+          <a href="#header" class="nav__link">Strona główna</a>
+        </li>
+        <li class="nav__items">
+          <a href="#about__me--section" class="nav__link">O mnie</a>
+        </li>
+        <li class="nav__items">
+          <a href="#my__skills--section" class="nav__link">Umiejętności</a>
+        </li>
+        <li class="nav__items">
+          <a href="#future__skills--section" class="nav__link">W trakcie nauki</a>
+        </li>
+        <li class="nav__items">
+          <a href="#portfolio__section" class="nav__link">Portfolio</a>
+        </li>
+        <li class="nav__items--box">
+          <a href="#contact__section" class="nav__link--box">Kontakt</a>
+        </li>
+      </ul>
     </nav>
 
     <section class="hero" id="top">
-
-        <div class="hero__shadow">
-
-            <div class="hero__description">
-                <h1 class="tittle">Reasons to hire me</h1>
-                <p class="cta"><a href="#header" class="cta__link">Sprawdź</a></p>
-            </div>
-
+      <div class="hero__shadow">
+        <div class="hero__description">
+          <h1 class="tittle">Reasons to hire me</h1>
+          <p class="cta"><a href="#header" class="cta__link">Sprawdź</a></p>
         </div>
+      </div>
     </section>
 
     <div class="separator__container" id="header">
-        <span class="separator"></span>
+      <span class="separator"></span>
     </div>
 
-
     <header id="section1">
+      <div class="header__photo">
+        <img src="img/header__photo.png" alt="my-photo" />
+      </div>
 
-        <div class="header__photo">
-            <img src="img/header__photo.png" alt="my-photo">
-        </div>
+      <div class="header__tittle">
+        <h2>Daria Kozielecka</h2>
+        <h3>Tworzę strony internetowe</h3>
+      </div>
 
-        <div class="header__tittle">
-            <h2>Daria Kozielecka</h2>
-            <h3>Tworzę strony internetowe</h3>
+      <div class="header__social--media">
+        <span class="header__social--tittle">Znajdź mnie</span>
+        <div class="header__social--icons">
+          <a href="https://github.com/dkozielecka" target="_blank" rel="noopener" aria-hidden="true"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/daria-kozielecka-723a7a142/"
+            target="_blank"
+            rel="noopener"
+            aria-hidden="true"
+            ><i class="fab fa-linkedin"></i
+          ></a>
         </div>
-
-        <div class="header__social--media">
-            <span class="header__social--tittle">Znajdź mnie</span>
-            <div class="header__social--icons">
-                <a href="https://github.com/dkozielecka" target="_blank" rel="noopener" aria-hidden="true"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/daria-kozielecka-723a7a142/" target="_blank" rel="noopener" aria-hidden="true"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
+      </div>
     </header>
 
     <div class="separator__container" id="about__me--section">
-        <span class="separator"></span>
+      <span class="separator"></span>
     </div>
 
     <section class="about__me--section">
+      <h2>O mnie</h2>
 
-        <h2>O mnie</h2>
+      <div class="about__me">
+        <img src="img/about__me.jpg" alt="" />
 
-        <div class="about__me">
-            <img src="img/about__me.jpg" alt="">
-
-            <p>Hej, jestem Daria. Mam 22 lata i uczę się front-end'u. Cechuje mnie duża upartość w dążeniu do celu i spory dystans do siebie. Lubię się śmiać i staram się być pozytywną osobą. W wolnych chwilach próbuję wszystkiego, żegluje, chodzę po linach, gram w gry komputerowe i planszowe, jeżdżę na nightdrivy, chodzę na siłownie, czytam książki, oglądam seriale i wszystko co tylko wpadnie mi do głowy. Aktualnie jestem na kursie "junior front-ed developer" i chętnie odbędę u kogoś staż.</p>
-
-        </div>
-
+        <p>
+          Hej, jestem Daria. Mam 23 lata i uczę się front-end'u. Cechuje mnie duża upartość w
+          dążeniu do celu i spory dystans do siebie. Lubię się śmiać i staram się być pozytywną
+          osobą. W wolnych chwilach próbuję wszystkiego, żegluje, chodzę po linach, gram w gry
+          komputerowe i planszowe, jeżdżę na nightdrivy, chodzę na siłownie, czytam książki, oglądam
+          seriale i wszystko co tylko wpadnie mi do głowy. Aktualnie jestem na kursie "junior
+          front-ed developer" i chętnie odbędę u kogoś staż.
+        </p>
+      </div>
     </section>
 
     <div class="separator__container" id="my__skills--section">
-        <span class="separator"></span>
+      <span class="separator"></span>
     </div>
 
     <section class="my__skills--section">
-
-        <h2>Umiejętności</h2>
-        <div class="my__skills">
-
-            <div class="icon">
-                <i class="fab fa-html5"></i>
-                <span>HTML&nbsp;5</span>
-            </div>
-
-            <div class="icon">
-                <i class="fab fa-css3-alt"></i>
-                <span>CSS&nbsp;3</span>
-            </div>
-
-            <div class="icon">
-                <i class="fab fa-wordpress-simple"></i>
-                <span>WordPress</span>
-            </div>
-
+      <h2>Umiejętności</h2>
+      <div class="my__skills">
+        <div class="icon">
+          <i class="fab fa-html5"></i>
+          <span>HTML&nbsp;5</span>
         </div>
 
+        <div class="icon">
+          <i class="fab fa-css3-alt"></i>
+          <span>CSS&nbsp;3</span>
+        </div>
+
+        <div class="icon">
+          <i class="fab fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+
+        <div class="icon">
+          <i class="fab fa-github"></i>
+          <span>Git</span>
+        </div>
+
+        <div class="icon">
+          <i class="fab fa-wordpress-simple"></i>
+          <span>WordPress</span>
+        </div>
+      </div>
     </section>
 
     <div class="separator__container" id="future__skills--section">
-        <span class="separator"></span>
+      <span class="separator"></span>
     </div>
 
     <section class="future__skills--section">
+      <h2>W trakcie nauki</h2>
 
-        <h2>W trakcie nauki</h2>
-
-        <div class="future__skills">
-
-            <div class="icon">
-                <i class="fab fa-js"></i>
-                <span>JavaScript</span>
-            </div>
-
-            <div class="icon">
-                <i class="fab fa-github"></i>
-                <span>Git</span>
-            </div>
-
-            <div class="icon">
-                <i class="fab fa-react"></i>
-                <span>React</span>
-            </div>
-
+      <div class="future__skills">
+        <div class="icon">
+          <i class="fab fa-react"></i>
+          <span>React</span>
         </div>
-
+      </div>
     </section>
 
     <div class="separator__container" id="portfolio__section">
-        <span class="separator"></span>
+      <span class="separator"></span>
     </div>
 
     <section class="portfolio__section">
+      <h2>Projekty</h2>
+      <div class="my__portfolio">
+        <div class="project__card">
+          <div class="card__tittle"><h3>Fruit Game</h3></div>
+          <div class="project__card--text">
+            <span>Prosta gra stworzona za pomocą JS.</span>
 
-        <h2>Projekty</h2>
-        <div class="my__portfolio">
-
-
-            <div class="project__card">
-
-                <div class="project__card--text">
-
-                    <h3>AllCars</h3>
-                    <span>Strona wizytówka warsztatu mechaniki pojazdowej, stworzona w Bootstrap 4.</span>
-                    <a href="http://allcars.tech/" target="_blank" rel="noopener">Demo</a>
-
-                </div>
-
-                <div class="project__card--img">
-                    <img src="img/allcars.png" alt="">
-                </div>
-
-
+            <div class="project__card--img">
+              <img
+                src="https://i.pinimg.com/originals/28/3d/2b/283d2b44e4d580269b8bd7c81ba4683e.png"
+                alt=""
+              />
             </div>
+          </div>
+          <div class="card__link">
+            <a href="https://dkozielecka.github.io/Fruit-game/" target="_blank" rel="noopener"
+              >Demo</a
+            >
+            <a href="https://dkozielecka.github.io/Fruit-game/" target="_blank" rel="noopener"
+              >Kod</a
+            >
+          </div>
+        </div>
+        <div class="project__card">
+          <div class="card__tittle"><h3>AllCars</h3></div>
 
-            <div class="project__card">
+          <div class="project__card--text">
+            <span>Strona wizytówka warsztatu mechaniki pojazdowej, stworzona w Bootstrap 4.</span>
 
-                <div class="project__card--text">
-
-                    <h3>Grandgala</h3>
-                    <span>Strona polsko-francuskiej gali charytatywnej. W całości wykonana w Wordpress'ie.</span>
-
-                    <a href="http://grandgala.org.pl/" target="_blank" rel="noopener">Demo</a>
-
-                </div>
-
-                <div class="project__card--img">
-                    <img src="img/grandgala.png" alt="">
-
-
-
-                </div>
+            <div class="project__card--img">
+              <img src="img/allcars.png" alt="" />
             </div>
-
-            <div class="project__card">
-
-                <div class="project__card--text">
-
-                    <h3>Portfolio</h3>
-                    <span>Stale udoskonalany projekt, a jednocześnie moja wizytówka. Wykonane za pomocą HTML5 i CSS3.</span>
-
-                    <a href="" target="_blank" rel="noopener">Demo</a>
-
-                </div>
-
-                <div class="project__card--img">
-
-                    <img src="img/header__photo.png" alt="">
-
-                </div>
-
-            </div>
-
+          </div>
+          <div class="card__link">
+            <a href="http://allcars.tech/" target="_blank" rel="noopener">Demo</a>
+            <a href="http://allcars.tech/" target="_blank" rel="noopener">Kod</a>
+          </div>
         </div>
 
+        <div class="project__card">
+          <div class="card__tittle"><h3>Grandgala</h3></div>
+          <div class="project__card--text">
+            <span
+              >Strona polsko-francuskiej gali charytatywnej. W całości wykonana w
+              Wordpress'ie.</span
+            >
+            <div class="project__card--img">
+              <img src="img/grandgala.png" alt="" />
+            </div>
+          </div>
+          <div class="card__link">
+            <a href="http://grandgala.org.pl/" target="_blank" rel="noopener">Demo</a>
+            <a href="http://grandgala.org.pl/" target="_blank" rel="noopener">Kod</a>
+          </div>
+        </div>
+
+        <div class="project__card">
+          <div class="card__tittle"><h3>Portfolio</h3></div>
+          <div class="project__card--text">
+            <span
+              >Stale udoskonalany projekt, a jednocześnie moja wizytówka. Wykonane za pomocą HTML5 i
+              CSS3.</span
+            >
+            <div class="project__card--img">
+              <img src="img/header__photo.png" alt="" />
+            </div>
+          </div>
+          <div class="card__link">
+            <a href="" target="_blank" rel="noopener">Demo</a>
+            <a href="" target="_blank" rel="noopener">Kod</a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="separator__container" id="contact__section">
-        <span class="separator"></span>
+      <span class="separator"></span>
     </div>
 
-
     <footer class="contact__section parallax">
-        <h2>Kontakt</h2>
+      <h2>Kontakt</h2>
 
-        <div class="contact">
-
-
-            <div class="icon">
-                <i class="fas fa-at"></i>
-                <span>daria.kozielecka@gmail.com</span>
-            </div>
-
-            <div class="icon">
-                <i class="fas fa-phone"></i>
-                <span>534-276-631</span>
-            </div>
-
-            <div class="icon">
-                <i class="far fa-copyright"></i>
-                <span>Zdjęcia: <a target="_blank" rel="noopener" href="https://www.maciejkolek.com/">https://www.maciejkolek.com/</a></span>
-            </div>
-
-
+      <div class="contact">
+        <div class="icon">
+          <i class="fas fa-at"></i>
+          <span>daria.kozielecka@gmail.com</span>
         </div>
 
-        <div class="separator__container">
-            <span class="separator"></span>
+        <div class="icon">
+          <i class="fas fa-phone"></i>
+          <span>534-276-631</span>
         </div>
 
-
-        <div class="back__button">
-            <a href="#top" aria-hidden="true"><i class="fas fa-chevron-circle-up"></i></a>
+        <div class="icon">
+          <i class="far fa-copyright"></i>
+          <span
+            >Zdjęcia:
+            <a target="_blank" rel="noopener" href="https://www.maciejkolek.com/"
+              >https://www.maciejkolek.com/</a
+            ></span
+          >
         </div>
+      </div>
 
-        <div class="copyright">
-            <span>2018 Daria Kozielecka All rights reserved. &copy; </span>
-        </div>
+      <div class="separator__container">
+        <span class="separator"></span>
+      </div>
 
+      <div class="back__button">
+        <a href="#top" aria-hidden="true"><i class="fas fa-chevron-circle-up"></i></a>
+      </div>
 
-
+      <div class="copyright">
+        <span>2018 Daria Kozielecka All rights reserved. &copy; </span>
+      </div>
     </footer>
-
-
-
-
-</body>
-
+  </body>
 </html>
