@@ -7,9 +7,15 @@ oglądam seriale i wszystko co tylko wpadnie mi do głowy. Aktualnie
 jestem na kursie "junior front-ed developer" i chętnie odbędę u kogoś
 staż.`;
 
-let descriptionContainer = document.querySelector(".about__me>p");
+let descriptionContainer = document.querySelector(".description");
 let number = 0;
 let index = 0;
+const cursor = document.querySelector(".cursor");
+
+const cursorAnimation = setInterval(
+  () => cursor.classList.toggle("un__active"),
+  500
+);
 
 const writing = setInterval(() => {
   if (number < description.length) {

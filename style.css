@@ -235,15 +235,30 @@ body {
   background-image: linear-gradient(135deg, #171b27 52%, #11141c 48%);
 }
 
-.about__me,
-.about__me > img,
-.about__me > p {
+.un__active {
+  opacity: 0;
+  transition: 0.3s linear;
+}
+
+.cursor {
+  transition: 0.3s linear;
+}
+
+.about__me {
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
-  max-width: 100vw;
+  width: 100%;
   height: auto;
+}
+.about__me > img,
+.about__me > div {
+  width: 50%;
+}
+.about__me > p {
+  display: flex;
+  justify-content: center;
 }
 
 .about__me--section > h2 {
@@ -254,7 +269,7 @@ body {
   color: #dd7f7c;
 }
 
-.about__me > p {
+.about__me > div {
   color: #c9c9d9;
   font-size: 2rem;
   letter-spacing: 0.5rem;
