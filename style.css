@@ -162,7 +162,7 @@ body {
   color: #dd7f7c;
 }
 
-.header__tittle > h3 {
+.header__tittle > div > span {
   font-size: 2rem;
   letter-spacing: 0.5rem;
   color: #c9c9d9;
