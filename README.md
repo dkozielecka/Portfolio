@@ -1,9 +1,76 @@
-# Portfolio
+# gatsby-starter-spectral
 
+Gatsby.js V2 starter template based on Spectral by HTML5 UP
 
-https://dkozielecka.github.io/Portfolio/
+For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/).
 
+![Screenshot](./src/assets/img/screenshot.jpg)
 
-https://color.adobe.com/pl/cloud/aHR0cHM6Ly9jYy1hcGktYXNzZXRzLmFkb2JlLmlv/library/EC32C9C0-291F-43AA-986A-BD7DB0959C3A/theme/43cbc485-2211-4974-9021-367b0a767947/edit/?base=2&rule=Custom&selected=2&name=%EB%8B%A4%EC%9D%8C%EC%9D%98%20%EB%B3%B5%EC%82%AC%EB%B3%B8%20Tema%20de%20Color%201&mode=rgb&rgbvalues=0.4235294117647059,0.5098039215686274,0.5254901960784314,1,0.8745098039215686,0.8156862745098039,0.6039215686274509,0.5411764705882353,0.5686274509803921,0.5215686274509804,0.3568627450980392,0.4392156862745098,0.8666666666666667,0.4980392156862745,0.48627450980392156&swatchOrder=0,1,2,3,4
+Check online preview [here](https://anubhavsrivastava.github.io/gatsby-starter-spectral/)
 
-https://color.adobe.com/pl/Uten-navn-color-theme-11521024/edit/?copy=true&base=2&rule=Custom&selected=1&name=Kopia%20Uten%20navn&mode=rgb&rgbvalues=0.0352941,0.0392157,0.0470588,0.0901961,0.105882,0.152941,0.3737859320388349,0.7,0.4213587815533653,0.419608,0.439216,0.462745,0.945098,0.945098,0.960784&swatchOrder=0,1,2,3,4
+## Screenshot
+
+![Screenshot](./src/assets/img/demo.png)
+
+## Install
+
+Make sure that you have the Gatsby CLI program installed:
+
+```sh
+npm install --global gatsby-cli
+```
+
+And run from your CLI:
+
+```sh
+gatsby new <site-name> https://github.com/anubhavsrivastava/gatsby-starter-spectral
+```
+
+Then you can run it by:
+
+```sh
+cd gatsby-example-site
+npm install
+gatsby develop
+```
+
+### Personalization
+
+Edit `config.js` to put up your details
+
+```javascript
+module.exports = {
+  siteTitle: 'Gatsby Starter spectral', // <title>
+  ...
+  heading: 'Anubhav',
+  subHeading: 'Web Developer',
+  // social
+  socialLinks: [
+    {
+      icon: 'fa-github',
+      name: 'Github',
+      url: 'https://github.com/anubhavsrivastava',
+    }
+    ...
+  ],
+};
+
+```
+
+### Deploying using Github page
+
+`package.json` has a default script that uses `gh-pages` module to publish on Github pages. Simply running `npm run deploy` would publish the site on github pages.
+
+Additionally, it also has [path-prefix](https://www.gatsbyjs.org/docs/path-prefix/) value set for gatsby config in `config.js`. Change `pathPrefix` to relevant path if your gatsby site is hosted on subpath of a domain, `https://theanubhav.com/somePath/`. If you are hosting it as root site, i.e, `https://theanubhav.com/` , remove the pathPrefix configuration.
+
+### Contribution
+
+Suggestions and PRs are welcome!
+
+Please create issue or open PR request for contribution.
+
+### License
+
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](LICENSE)
+
+refer `LICENSE` file in this repository.
