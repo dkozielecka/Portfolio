@@ -11,10 +11,10 @@
  * See https://goo.gl/2aRDsh
  */
 
-importScripts("workbox-v3.6.3/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "workbox-v3.6.3"});
+importScripts('workbox-v3.6.3/workbox-sw.js');
+workbox.setConfig({modulePathPrefix: 'workbox-v3.6.3'});
 
-workbox.core.setCacheNameDetails({prefix: "gatsby-plugin-offline"});
+workbox.core.setCacheNameDetails({prefix: 'gatsby-plugin-offline'});
 
 workbox.skipWaiting();
 workbox.clientsClaim();
@@ -26,149 +26,166 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-6f12e057a81ffb1facee.js"
+      url: 'webpack-runtime-12662d16af6ac1507c81.js',
   },
   {
-    "url": "app-241974840cf9509728ea.js"
+      url: 'app-43f963c9d95d7ada8b05.js',
   },
   {
-    "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-5960f90cf7e75b708f9f.js"
+      url:
+          'component---node-modules-gatsby-plugin-offline-app-shell-js-9a3e4c2748cee1270623.js',
   },
   {
-    "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "e071bb877db68b3fb52df354561c2209"
+      url: 'offline-plugin-app-shell-fallback/index.html',
+      revision: '0aa1df5c35978c1ceb6d8992438b8e1e',
   },
   {
-    "url": "styles.5711fbfe40cb38277bee.css"
+      url: 'styles.9054b91e0e3b03281ef6.css',
   },
   {
-    "url": "1-20737de4f8b2591d572d.js"
+      url: '1-bf77cc766521355b0fec.js',
   },
   {
-    "url": "component---src-pages-404-js-87e20657c2fc79dbfe70.js"
+      url: 'component---src-pages-404-js-5c31b09599a40e6babac.js',
   },
   {
-    "url": "styles-6be7257993bc60dbd36e.js"
+      url: 'styles-6956d8f9dae9d0b2113b.js',
   },
   {
-    "url": "page-data/404.html/page-data.json",
-    "revision": "421b775802a393be800652e5ae3b932b"
+      url: 'page-data/404.html/page-data.json',
+      revision: '90cfcc33b7d9df4ec122022d23210d67',
   },
   {
-    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "863883b48358d63ac5e5e28fc16849f1"
+      url: 'page-data/offline-plugin-app-shell-fallback/page-data.json',
+      revision: 'a332f19a1519ce74dd1892644575f33d',
   },
   {
-    "url": "manifest.webmanifest",
-    "revision": "6d92e4926f2c44942527136b4ecff5b9"
-  }
+      url: 'manifest.webmanifest',
+      revision: '6d92e4926f2c44942527136b4ecff5b9',
+  },
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerRoute(/(\.js$|\.css$|static\/)/, workbox.strategies.cacheFirst(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\page-data\/.*\/page-data\.json/, workbox.strategies.networkFirst(), 'GET');
-workbox.routing.registerRoute(/^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/, workbox.strategies.staleWhileRevalidate(), 'GET');
-workbox.routing.registerRoute(/^https?:\/\/fonts\.googleapis\.com\/css/, workbox.strategies.staleWhileRevalidate(), 'GET');
+workbox.routing.registerRoute(
+    /(\.js$|\.css$|static\/)/,
+    workbox.strategies.cacheFirst(),
+    'GET'
+);
+workbox.routing.registerRoute(
+    /^https?:.*\page-data\/.*\/page-data\.json/,
+    workbox.strategies.networkFirst(),
+    'GET'
+);
+workbox.routing.registerRoute(
+    /^https?:.*\.(png|jpg|jpeg|webp|svg|gif|tiff|js|woff|woff2|json|css)$/,
+    workbox.strategies.staleWhileRevalidate(),
+    'GET'
+);
+workbox.routing.registerRoute(
+    /^https?:\/\/fonts\.googleapis\.com\/css/,
+    workbox.strategies.staleWhileRevalidate(),
+    'GET'
+);
 
 /* global importScripts, workbox, idbKeyval */
 
-importScripts(`idb-keyval-iife.min.js`)
-const WHITELIST_KEY = `custom-navigation-whitelist`
+importScripts(`idb-keyval-iife.min.js`);
+const WHITELIST_KEY = `custom-navigation-whitelist`;
 
 const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
-  const { pathname } = new URL(event.request.url)
+    const {pathname} = new URL(event.request.url);
 
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/dkozielecka-portfolio/offline-plugin-app-shell-fallback/index.html`
-      const cacheName = workbox.core.cacheNames.precache
+        const offlineShell = `/dkozielecka-portfolio/offline-plugin-app-shell-fallback/index.html`;
+        const cacheName = workbox.core.cacheNames.precache;
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
-        if (cachedResponse) return cachedResponse
+          if (cachedResponse) return cachedResponse;
 
         console.error(
           `The offline shell (${offlineShell}) was not found ` +
             `while attempting to serve a response for ${pathname}`
-        )
+        );
 
         return fetch(offlineShell).then(response => {
           if (response.ok) {
             return caches.open(cacheName).then(cache =>
               // Clone is needed because put() consumes the response body.
               cache.put(offlineShell, response.clone()).then(() => response)
-            )
+            );
           } else {
-            return fetch(event.request)
+              return fetch(event.request);
           }
-        })
-      })
+        });
+      });
     }
 
-    return fetch(event.request)
-  })
-})
+      return fetch(event.request);
+  });
+});
 
-workbox.routing.registerRoute(navigationRoute)
+workbox.routing.registerRoute(navigationRoute);
 
-let updatingWhitelist = null
+let updatingWhitelist = null;
 
 function rawWhitelistPathnames(pathnames) {
   if (updatingWhitelist !== null) {
     // Prevent the whitelist from being updated twice at the same time
-    return updatingWhitelist.then(() => rawWhitelistPathnames(pathnames))
+      return updatingWhitelist.then(() => rawWhitelistPathnames(pathnames));
   }
 
   updatingWhitelist = idbKeyval
     .get(WHITELIST_KEY)
     .then((customWhitelist = []) => {
       pathnames.forEach(pathname => {
-        if (!customWhitelist.includes(pathname)) customWhitelist.push(pathname)
-      })
+          if (!customWhitelist.includes(pathname)) customWhitelist.push(pathname);
+      });
 
-      return idbKeyval.set(WHITELIST_KEY, customWhitelist)
+        return idbKeyval.set(WHITELIST_KEY, customWhitelist);
     })
     .then(() => {
-      updatingWhitelist = null
-    })
+        updatingWhitelist = null;
+    });
 
-  return updatingWhitelist
+    return updatingWhitelist;
 }
 
 function rawResetWhitelist() {
   if (updatingWhitelist !== null) {
-    return updatingWhitelist.then(() => rawResetWhitelist())
+      return updatingWhitelist.then(() => rawResetWhitelist());
   }
 
   updatingWhitelist = idbKeyval.set(WHITELIST_KEY, []).then(() => {
-    updatingWhitelist = null
-  })
+      updatingWhitelist = null;
+  });
 
-  return updatingWhitelist
+    return updatingWhitelist;
 }
 
 const messageApi = {
   whitelistPathnames(event) {
-    let { pathnames } = event.data
+      let {pathnames} = event.data;
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/dkozielecka-portfolio${pathname}`
+          return `/dkozielecka-portfolio${pathname}`;
       } else {
-        return pathname
+          return pathname;
       }
-    })
+    });
 
-    event.waitUntil(rawWhitelistPathnames(pathnames))
+      event.waitUntil(rawWhitelistPathnames(pathnames));
   },
 
   resetWhitelist(event) {
-    event.waitUntil(rawResetWhitelist())
+      event.waitUntil(rawResetWhitelist());
   },
-}
+};
 
 self.addEventListener(`message`, event => {
-  const { gatsbyApi } = event.data
-  if (gatsbyApi) messageApi[gatsbyApi](event)
-})
+    const {gatsbyApi} = event.data;
+    if (gatsbyApi) messageApi[gatsbyApi](event);
+});
