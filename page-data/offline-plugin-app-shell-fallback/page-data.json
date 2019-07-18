@@ -1,0 +1,10 @@
+{
+  "componentChunkName": "component---node-modules-gatsby-plugin-offline-app-shell-js",
+  "path": "/offline-plugin-app-shell-fallback/",
+  "webpackCompilationHash": "4c5732a0f7517836e455",
+  "result": {
+    "pageContext": {
+      "isCreatedByStatefulCreatePages": false
+    }
+  }
+}
