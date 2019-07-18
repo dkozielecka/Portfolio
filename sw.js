@@ -26,41 +26,41 @@ workbox.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ddb96f18cb1f29076bf2.js"
+    "url": "webpack-runtime-d1f44c324f38b5b0e92a.js"
   },
   {
-    "url": "app-241974840cf9509728ea.js"
+    "url": "app-531363b41b8ce599fd85.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-5960f90cf7e75b708f9f.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "f5e70fdc33f94595e190bbfd1118f996"
+    "revision": "ff77413ee4438bb3500e754af3ad6237"
   },
   {
-    "url": "styles.5711fbfe40cb38277bee.css"
+    "url": "styles.99b2de2ca0a50d76045e.css"
   },
   {
     "url": "1-20737de4f8b2591d572d.js"
   },
   {
-    "url": "component---src-pages-404-js-c0123731af35ba56f2d5.js"
+    "url": "component---src-pages-404-js-cb6d9550e44de9a90e9e.js"
   },
   {
     "url": "styles-6be7257993bc60dbd36e.js"
   },
   {
     "url": "page-data/404.html/page-data.json",
-    "revision": "6b882801958c6c4320da30abb8699ec7"
+    "revision": "9b391ebc6fe6aa8f0adc04291e10c2ee"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
-    "revision": "56bcef326e043bf0343348edab712f15"
+    "revision": "57645df456ac7dacc95260d948237b1d"
   },
   {
     "url": "manifest.webmanifest",
-    "revision": "6d92e4926f2c44942527136b4ecff5b9"
+    "revision": "93fbda15e7d603ee2ebaf3bbcc5c76d2"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
@@ -82,7 +82,7 @@ const navigationRoute = new workbox.routing.NavigationRoute(({ event }) => {
   return idbKeyval.get(WHITELIST_KEY).then((customWhitelist = []) => {
     // Respond with the offline shell if we match the custom whitelist
     if (customWhitelist.includes(pathname)) {
-      const offlineShell = `/dkozielecka-portfolio/offline-plugin-app-shell-fallback/index.html`
+      const offlineShell = `/Portfolio/offline-plugin-app-shell-fallback/index.html`
       const cacheName = workbox.core.cacheNames.precache
 
       return caches.match(offlineShell, { cacheName }).then(cachedResponse => {
@@ -154,7 +154,7 @@ const messageApi = {
 
     pathnames = pathnames.map(({ pathname, includesPrefix }) => {
       if (!includesPrefix) {
-        return `/dkozielecka-portfolio${pathname}`
+        return `/Portfolio${pathname}`
       } else {
         return pathname
       }
