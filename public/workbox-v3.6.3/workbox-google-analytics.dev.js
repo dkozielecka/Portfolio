@@ -1,13 +1,5 @@
 this.workbox = this.workbox || {};
-this.workbox.googleAnalytics = (function (
-    exports,
-    Plugin_mjs,
-    cacheNames_mjs,
-    Route_mjs,
-    Router_mjs,
-    NetworkFirst_mjs,
-    NetworkOnly_mjs
-) {
+this.workbox.googleAnalytics = (function (exports, Plugin_mjs, cacheNames_mjs, Route_mjs, Router_mjs, NetworkFirst_mjs, NetworkOnly_mjs) {
     'use strict';
 
     try {
@@ -16,19 +8,19 @@ this.workbox.googleAnalytics = (function (
     } // eslint-disable-line
 
     /*
-        Copyright 2017 Google Inc. All Rights Reserved.
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
+     Copyright 2017 Google Inc. All Rights Reserved.
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-            http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
-       */
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+    */
 
     const QUEUE_NAME = 'workbox-google-analytics';
     const MAX_RETENTION_TIME = 60 * 48; // Two days in minutes
@@ -44,19 +36,19 @@ this.workbox.googleAnalytics = (function (
     const COLLECT_PATHS_REGEX = /^\/(\w+\/)?collect/;
 
     /*
-        Copyright 2017 Google Inc. All Rights Reserved.
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
+     Copyright 2017 Google Inc. All Rights Reserved.
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-            http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
-       */
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+    */
 
     /**
      * Promisifies the FileReader API to await a text response from a Blob.
@@ -109,10 +101,7 @@ this.workbox.googleAnalytics = (function (
                 // the URL query string (for GET requests) or the POST body.
                 let params;
                 if (requestInit.body) {
-                    const payload =
-                        requestInit.body instanceof Blob
-                            ? yield getTextFromBlob(requestInit.body)
-                            : requestInit.body;
+                    const payload = requestInit.body instanceof Blob ? yield getTextFromBlob(requestInit.body) : requestInit.body;
 
                     params = new URLSearchParams(payload);
                 } else {
@@ -163,18 +152,13 @@ this.workbox.googleAnalytics = (function (
      * @private
      */
     const createCollectRoutes = queuePlugin => {
-        const match = ({url}) =>
-            url.hostname === GOOGLE_ANALYTICS_HOST &&
-            COLLECT_PATHS_REGEX.test(url.pathname);
+        const match = ({url}) => url.hostname === GOOGLE_ANALYTICS_HOST && COLLECT_PATHS_REGEX.test(url.pathname);
 
         const handler = new NetworkOnly_mjs.NetworkOnly({
-            plugins: [queuePlugin],
+            plugins: [queuePlugin]
         });
 
-        return [
-            new Route_mjs.Route(match, handler, 'GET'),
-            new Route_mjs.Route(match, handler, 'POST'),
-        ];
+        return [new Route_mjs.Route(match, handler, 'GET'), new Route_mjs.Route(match, handler, 'POST')];
     };
 
     /**
@@ -186,9 +170,7 @@ this.workbox.googleAnalytics = (function (
      * @private
      */
     const createAnalyticsJsRoute = cacheName => {
-        const match = ({url}) =>
-            url.hostname === GOOGLE_ANALYTICS_HOST &&
-            url.pathname === ANALYTICS_JS_PATH;
+        const match = ({url}) => url.hostname === GOOGLE_ANALYTICS_HOST && url.pathname === ANALYTICS_JS_PATH;
         const handler = new NetworkFirst_mjs.NetworkFirst({cacheName});
 
         return new Route_mjs.Route(match, handler, 'GET');
@@ -203,8 +185,7 @@ this.workbox.googleAnalytics = (function (
      * @private
      */
     const createGtagJsRoute = cacheName => {
-        const match = ({url}) =>
-            url.hostname === GTM_HOST && url.pathname === GTAG_JS_PATH;
+        const match = ({url}) => url.hostname === GTM_HOST && url.pathname === GTAG_JS_PATH;
         const handler = new NetworkFirst_mjs.NetworkFirst({cacheName});
 
         return new Route_mjs.Route(match, handler, 'GET');
@@ -227,22 +208,16 @@ this.workbox.googleAnalytics = (function (
      * @memberof workbox.googleAnalytics
      */
     const initialize = (options = {}) => {
-        const cacheName = cacheNames_mjs.cacheNames.getGoogleAnalyticsName(
-            options.cacheName
-        );
+        const cacheName = cacheNames_mjs.cacheNames.getGoogleAnalyticsName(options.cacheName);
 
         const queuePlugin = new Plugin_mjs.Plugin(QUEUE_NAME, {
             maxRetentionTime: MAX_RETENTION_TIME,
             callbacks: {
-                requestWillReplay: createRequestWillReplayCallback(options),
-            },
+                requestWillReplay: createRequestWillReplayCallback(options)
+            }
         });
 
-        const routes = [
-            createAnalyticsJsRoute(cacheName),
-            createGtagJsRoute(cacheName),
-            ...createCollectRoutes(queuePlugin),
-        ];
+        const routes = [createAnalyticsJsRoute(cacheName), createGtagJsRoute(cacheName), ...createCollectRoutes(queuePlugin)];
 
         const router = new Router_mjs.Router();
         for (const route of routes) {
@@ -258,31 +233,24 @@ this.workbox.googleAnalytics = (function (
     };
 
     /*
-        Copyright 2017 Google Inc. All Rights Reserved.
-        Licensed under the Apache License, Version 2.0 (the "License");
-        you may not use this file except in compliance with the License.
-        You may obtain a copy of the License at
+     Copyright 2017 Google Inc. All Rights Reserved.
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-            http://www.apache.org/licenses/LICENSE-2.0
+         http://www.apache.org/licenses/LICENSE-2.0
 
-        Unless required by applicable law or agreed to in writing, software
-        distributed under the License is distributed on an "AS IS" BASIS,
-        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-        See the License for the specific language governing permissions and
-        limitations under the License.
-       */
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+    */
 
     exports.initialize = initialize;
 
     return exports;
-})(
-    {},
-    workbox.backgroundSync,
-    workbox.core._private,
-    workbox.routing,
-    workbox.routing,
-    workbox.strategies,
-    workbox.strategies
-);
+
+}({}, workbox.backgroundSync, workbox.core._private, workbox.routing, workbox.routing, workbox.strategies, workbox.strategies));
 
 //# sourceMappingURL=workbox-google-analytics.dev.js.map
